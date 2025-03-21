@@ -1,0 +1,131 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: 'Courier New', Courier, monospace;
+  color: #ccc;
+  overflow-x: hidden;
+}
+
+/* Container adjusted for Android phone size */
+.container {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #333;
+}
+
+header p {
+  font-size: 1em;
+  opacity: 0.8;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+article {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+article h2 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+article p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.highlight {
+  color: #fff;
+  font-weight: bold;
+}
+
+.contact {
+  margin: 30px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.contact h2 {
+  margin: 0 0 10px 0;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.8em;
+  opacity: 0.6;
+}
+
+/* Glitch effect for main title */
+@keyframes glitch {
+  0% {
+    text-shadow: 2px 2px 1px #fff, -2px -2px 1px #333;
+  }
+  20% {
+    text-shadow: -2px -2px 1px #fff, 2px 2px 1px #333;
+  }
+  40% {
+    text-shadow: 2px -2px 1px #fff, -2px 2px 1px #333;
+  }
+  60% {
+    text-shadow: -2px 2px 1px #fff, 2px -2px 1px #333;
+  }
+  80% {
+    text-shadow: 2px 2px 1px #fff, -2px -2px 1px #333;
+  }
+  100% {
+    text-shadow: -2px -2px 1px #fff, 2px 2px 1px #333;
+  }
+}
+
+#main-title {
+  animation: glitch 1s infinite alternate;
+}
+
+/* Responsive adjustments for Android screens */
+@media only screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+  article h2, .contact h2 {
+    font-size: 1.3em;
+  }
+  header p, article p, .contact p, footer p {
+    font-size: 0.9em;
+  }
+}
